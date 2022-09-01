@@ -32,6 +32,15 @@
                                     <action selector="touchUpHitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Gr-Gh-GO8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtW-7I-Q6R">
+                                <rect key="frame" x="657" y="55" width="87" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RESET"/>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ud-eQ-QPd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
