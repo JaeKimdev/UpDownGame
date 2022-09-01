@@ -9,6 +9,67 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Credit View Controller-->
+        <scene sceneID="XVA-zE-f3M">
+            <objects>
+                <viewController id="y7w-Id-QZm" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hun-Bp-XqX">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-uj-yT3">
+                                <rect key="frame" x="64" y="107" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gyf-R4-Auv"/>
+                                    <constraint firstAttribute="height" constant="200" id="i7p-Yb-ld7"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-FI-Zmn">
+                                <rect key="frame" x="284" y="20" width="548" height="353"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Hello World!!
+
+I'm Jae
+
+My Contact is:
+https://jaekimdev.github.io/
+JaeKimDev@gmail.com</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdx-oz-LAD">
+                                <rect key="frame" x="64" y="20" width="80" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.rectangle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="y7w-Id-QZm" eventType="touchUpInside" id="iGO-aO-u6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YVh-x9-4HQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PC1-uj-yT3" firstAttribute="centerY" secondItem="hun-Bp-XqX" secondAttribute="centerY" id="MsW-m7-8v8"/>
+                            <constraint firstItem="Xdx-oz-LAD" firstAttribute="leading" secondItem="YVh-x9-4HQ" secondAttribute="leading" constant="20" id="Msv-Wa-9LI"/>
+                            <constraint firstItem="YVh-x9-4HQ" firstAttribute="trailing" secondItem="ODe-FI-Zmn" secondAttribute="trailing" constant="20" id="aYC-lv-WfP"/>
+                            <constraint firstItem="YVh-x9-4HQ" firstAttribute="bottom" secondItem="ODe-FI-Zmn" secondAttribute="bottom" constant="20" id="cgi-To-eCp"/>
+                            <constraint firstItem="PC1-uj-yT3" firstAttribute="leading" secondItem="Xdx-oz-LAD" secondAttribute="leading" id="meP-dW-j6J"/>
+                            <constraint firstItem="Xdx-oz-LAD" firstAttribute="top" secondItem="YVh-x9-4HQ" secondAttribute="top" constant="20" id="o5p-5p-sKF"/>
+                            <constraint firstItem="ODe-FI-Zmn" firstAttribute="top" secondItem="YVh-x9-4HQ" secondAttribute="top" constant="20" id="pq5-FT-dLx"/>
+                            <constraint firstItem="ODe-FI-Zmn" firstAttribute="leading" secondItem="PC1-uj-yT3" secondAttribute="trailing" constant="20" id="qli-A5-IYm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4p-dX-DrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.78571428571422" y="121.73913043478262"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,6 +88,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="y7w-Id-QZm" kind="presentation" modalTransitionStyle="crossDissolve" id="anG-zF-gxP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-Cp-vJK">
                                 <rect key="frame" x="410.5" y="238" width="75.5" height="52.5"/>
@@ -134,8 +198,16 @@
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
+        <image name="yagom_symbol" width="167" height="160.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
